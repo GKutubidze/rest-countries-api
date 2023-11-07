@@ -43,7 +43,7 @@ const InfoComponent = (props: Props) => {
         </div>
         <div className={styles.currencies}>
           <span className={styles.info}>Currencies: </span>
-          <span>{currencies[0].code}</span>
+          <span>{currencies?.[0].code}</span>
         </div>
         <div className={styles.languages}>
           <span className={styles.info}>Languages: </span>
