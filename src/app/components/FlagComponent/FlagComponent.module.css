@@ -1,0 +1,8 @@
+ .flag{
+    padding-left: 28px;
+    padding-right: 27px;
+    margin-bottom:44px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }

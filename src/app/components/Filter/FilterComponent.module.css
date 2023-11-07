@@ -1,0 +1,20 @@
+.filter{
+    width: 200px;
+}
+.region{
+    width: 200px;
+    height: 48px;
+    background-color: white;
+    border: none;
+    font-size: 12px;
+    margin-left: 16px;
+}
+ 
+
+   
+@media (min-width: 768px) {
+  .filter {
+margin-top: 25px;
+margin-right: 25px;
+  }
+}

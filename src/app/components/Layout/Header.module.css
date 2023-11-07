@@ -1,0 +1,30 @@
+.header{
+    display: flex;
+    width: 100vw;
+    justify-content:space-between;
+    height: 80px;
+    background-color: var(--text-color);
+    align-items: center;
+    padding: 30px 16px;
+   
+  }
+.headerTitle{
+    color: var(--light-mode-text-dark-blue);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    cursor: pointer;
+}
+.darkMode{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-right: 16px;
+
+}
+.darkMode span {
+    font-size: 12px;
+}
+.darkMode span {
+    cursor: pointer;
+}

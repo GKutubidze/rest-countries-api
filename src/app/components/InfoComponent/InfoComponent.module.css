@@ -1,0 +1,33 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    color: #111517;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32px; /* 228.571% */
+}
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:32px;
+   
+}
+.nativeName,.population,.region,.subregion,.domain,.currencies,.languages{
+    color: #111517;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 32px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .main{
+    flex-direction: row;
+    gap:10%;
+
+}
+    
+   }

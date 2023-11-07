@@ -1,0 +1,37 @@
+
+.main {
+     display: flex;
+    flex-direction: column;
+    
+    margin-top:64px;   /* change for dektop */
+
+}
+.name{
+    color: #111517;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+
+ 
+.contant{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 28px;
+}
+.responsive {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+@media screen and (min-width: 768px) {
+    .responsive{
+        flex-direction: row;
+      }
+    
+   }
+  

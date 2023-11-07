@@ -1,0 +1,19 @@
+.countriesContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:40px;
+    margin-top:32px;
+}
+
+@media (min-width: 768px) {
+    .countriesContainer {
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+    }
+}
+.link{
+   all:unset;
+   cursor: pointer;
+}
