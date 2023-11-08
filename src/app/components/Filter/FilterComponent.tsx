@@ -1,14 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import styles from "./FilterComponent.module.css";
-const FilterComponent = () => {
-  const [selectedRegion, setSelectedRegion] = useState("Filter by Region");
-
+type Props={
+  selectedRegion:string;
+  setSelectedRegion:Dispatch<SetStateAction<string>>;
+}
+const FilterComponent = (props:Props) => {
+const {selectedRegion,setSelectedRegion}=props;
   const handleRegionChange = (e: any) => {
     setSelectedRegion(e.target.value);
     // You can use this selectedRegion value to filter data or perform other actions.
   };
-  return (
+   return (
     <div className={styles.filter}>
       <label htmlFor="region"></label>
       <select
@@ -16,7 +19,7 @@ const FilterComponent = () => {
         onChange={handleRegionChange}
         value={selectedRegion}
       >
-        <option value="Filter by Region">Filter by Region</option>
+        <option value=" ">Filter by Region</option>
         <option value="Africa">Africa</option>
         <option value="America">America</option>
         <option value="Asia">Asia</option>

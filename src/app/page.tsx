@@ -9,19 +9,22 @@ import { useState } from "react";
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [isDark, setIsDark] = useState<boolean>(false);
+  const [selectedRegion, setSelectedRegion] = useState("");
+
   const mainContainerStyle = {
     backgroundColor: isDark ? "#202C36" : "hsl(0, 0%, 98%)",
   };
-  console.log(isDark);
+  console.log(selectedRegion);
 
   return (
     <main className={styles.main} style={mainContainerStyle}>
       <Header isDark={isDark} setIsDark={setIsDark} />
-       <SearchPanel setSearchQuery={setSearchQuery} isDark={isDark} />
+       <SearchPanel setSearchQuery={setSearchQuery} isDark={isDark} selectedRegion={selectedRegion}  setSelectedRegion={setSelectedRegion} />
       <CountriesComponent
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         isDark={isDark}
+        selectedRegion={selectedRegion}
       />
 
     </main>

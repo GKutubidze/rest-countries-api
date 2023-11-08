@@ -8,13 +8,14 @@ interface Props {
   searchQuery: string;
   setSearchQuery: Dispatch<SetStateAction<string>>;
   isDark: boolean;
+  selectedRegion:string;
 }
 
 const CountriesComponent = (props: Props) => {
-  const { searchQuery, setSearchQuery, isDark } = props;
+  const { searchQuery, setSearchQuery, isDark,selectedRegion } = props;
   const filteredData = data.filter((country) =>
     country.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  ).filter((country)=>country.region.includes(selectedRegion));
 
   return (
     <div className={styles.countriesContainer}>
