@@ -15,7 +15,7 @@ const Country = () => {
   const router = useRouter();
   const { country } = router.query;
   const countryName = Array.isArray(country) ? country[0] : country;
-  const countryData = data.find((item) => item.name === countryName);
+  const countryData = data?.find((item) => item.name === countryName);
   const [darkmode,setDarmode]=useState<boolean>(false);
   if (countryData) {
     const mainContainerStyle = {

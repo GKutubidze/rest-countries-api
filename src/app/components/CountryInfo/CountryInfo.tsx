@@ -26,15 +26,17 @@ const CountryInfo = (props: NewProps) => {
   } = props;
   const mainContainerStyle = {
     backgroundColor: darkmode ? "#202C36" : "white",
+    color:darkmode ? "white":"black"
+
   };
   return (
     <div className={styles.main} style={mainContainerStyle}> 
       <div className={styles.responsive}>
         <FlagComponent flagUrl={flagUrl} />
         <div className={styles.contant}>
-          <div className={styles.name}> {name}</div>
-          <InfoComponent {...props} />
-          <BorderCountries borders={borders} />
+          <div className={styles.name} style={mainContainerStyle}> {name}</div>
+          <InfoComponent {...props} darkmode={darkmode} />
+          <BorderCountries borders={borders} darkmode={darkmode} />
         </div>
       </div>
     </div>

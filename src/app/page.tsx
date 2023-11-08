@@ -17,12 +17,13 @@ export default function Home() {
   return (
     <main className={styles.main} style={mainContainerStyle}>
       <Header isDark={isDark} setIsDark={setIsDark} />
-      <SearchPanel setSearchQuery={setSearchQuery} isDark={isDark} />
+       <SearchPanel setSearchQuery={setSearchQuery} isDark={isDark} />
       <CountriesComponent
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
         isDark={isDark}
       />
+
     </main>
   );
 }

@@ -10,7 +10,8 @@ const SearchComponent = (props: Props) => {
   const { setSearchQuery, isDark } = props;
   const mainContainerStyle = {
     backgroundColor: isDark ? "#2B3844" : "white",
-  };
+    color:isDark ?"white":"black",
+    };
   return (
     <div className={styles.searchContainer}>
       <span className={styles.searchIcon}>
