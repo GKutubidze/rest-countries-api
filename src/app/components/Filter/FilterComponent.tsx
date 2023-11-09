@@ -8,7 +8,9 @@ type Props={
 const FilterComponent = (props:Props) => {
 const {selectedRegion,setSelectedRegion}=props;
   const handleRegionChange = (e: any) => {
-    setSelectedRegion(e.target.value);
+    const newSelectedRegion = e.target.value === " " ? "" : e.target.value;
+
+    setSelectedRegion(newSelectedRegion);
     // You can use this selectedRegion value to filter data or perform other actions.
   };
    return (
@@ -25,6 +27,8 @@ const {selectedRegion,setSelectedRegion}=props;
         <option value="Asia">Asia</option>
         <option value="Europe">Europe</option>
         <option value="Oceania">Oceania</option>
+                <option value="Antarctic Ocean">Antarctic Ocean</option> {/* Add this line */}
+
       </select>
     </div>
   );
